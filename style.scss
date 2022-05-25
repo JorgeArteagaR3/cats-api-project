@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Nunito", sans-serif;
+    background-color: #f0f4f4;
+}
+
+header {
+    text-align: center;
+    h1 {
+        color: #474747;
+        margin-top: 1em;
+    }
+}
+h2 {
+    text-align: center;
+    color: #979ea6;
+    margin-bottom: 1em;
+}
+img {
+    width: 111px;
+    height: 150px;
+}
+a {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 23px;
+    height: 23px;
+    background-color: #f0f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+        svg {
+            path {
+                fill: red;
+            }
+        }
+    }
+}
+.btn-generator {
+    background: linear-gradient(270deg, #fdb74a -12.71%, #fc5c4c 121.19%);
+    width: 100px;
+    margin: 0 auto;
+    border: 0;
+    padding: 0.2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 10px;
+    color: #ffffff;
+}
+#randomKittens {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3em;
+    .random-cats-section {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 1em;
+    }
+
+    article {
+        position: relative;
+    }
+    a {
+        &:hover {
+            svg {
+                path {
+                    fill: red;
+                }
+            }
+        }
+    }
+}
+
+#favCats {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 0 auto;
+    max-width: 630px;
+    article {
+        position: relative;
+        a {
+            background-image: url(./imgs/redheart.png);
+            background-size: 14px;
+            background-repeat: no-repeat;
+            background-position: center;
+            &:hover {
+                background-image: url(./imgs/heart.png);
+            }
+        }
+    }
+}
+@media only screen and (min-width: 680px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    img {
+        width: 218px;
+        height: 240px;
+    }
+    #favCats {
+        max-width: 900px;
+        gap: 20px;
+    }
+    #randomKittens {
+        .random-cats-section {
+            gap: 20px;
+        }
+    }
+    .btn-generator {
+        width: 200px;
+        font-size: 1.6rem;
+        padding-top: 0.6em;
+        padding-bottom: 0.7em;
+        cursor: pointer;
+        &:hover {
+            background: #474747;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    img {
+        width: 300px;
+        height: 340px;
+    }
+    #favCats {
+        max-width: 1920px;
+        gap: 20px;
+    }
+    #randomKittens {
+        .random-cats-section {
+            gap: 20px;
+        }
+    }
+    .btn-generator {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 2rem;
+    }
+}
