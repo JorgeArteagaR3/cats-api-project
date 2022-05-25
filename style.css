@@ -180,7 +180,7 @@ a:hover svg path {
     height: 340px;
   }
   #favCats {
-    max-width: 1920px;
+    max-width: 1600px;
     gap: 20px;
   }
   #randomKittens .random-cats-section {
