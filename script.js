@@ -7,6 +7,7 @@ const API_URL_FAV =
 const API_URL_DEL = (id) =>
     `https://api.thecatapi.com/v1/favourites/${id}?api_key=74b7f83d-ba55-429a-9f30-5f050833f46b`;
 
+const API_URL_UPLOAD = "https://api.thecatapi.com/v1/images/upload/";
 const spanError = document.getElementById("error");
 const loadRandomKittens = async () => {
     const res = await fetch(API_URL_RANDOM);
@@ -91,9 +92,46 @@ async function deleteFavKittens(id) {
         spanError.innerHTML = "Hubo un error: " + res.status + data.message;
     } else {
         console.log("CAT DELETED");
+        loadFavKittens();
     }
-    loadFavKittens();
 }
+
+async function uploadKittenPhoto() {
+    const form = document.getElementById("uploadingForm");
+    const formData = new FormData(form);
+    console.log(formData.get("file"));
+
+    const res = await fetch(API_URL_UPLOAD, {
+        method: "POST",
+        headers: {
+            // "Content-Type": "multipata/form-data",
+            "x-api-key": "74b7f83d-ba55-429a-9f30-5f050833f46b",
+        },
+        body: formData,
+    });
+    const errorp = document.getElementById("errorp");
+    const data = await res.json();
+    if (res.status == 201) {
+        console.log("PHOTO UPLOADED");
+        console.log({ data });
+        saveFavKittens(data.id);
+        errorp.innerHTML = "";
+    } else {
+        console.log("ERROR UPLOADING");
+
+        errorp.innerHTML = "Cannot Upload this Image";
+    }
+}
+
+const inputFile = document.getElementById("file");
+const imagePreview = document.getElementById("preview");
+
+inputFile.onchange = (e) => {
+    const [file] = inputFile.files;
+    if (file) {
+        imagePreview.src = URL.createObjectURL(file);
+    }
+};
 
 loadRandomKittens();
 loadFavKittens();

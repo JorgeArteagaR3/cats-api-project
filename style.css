@@ -192,4 +192,87 @@ a:hover svg path {
     font-size: 2rem;
   }
 }
+
+#uploadCat {
+  margin-top: 3em;
+}
+
+#uploadingForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#uploadingForm img {
+  margin-bottom: 1em;
+}
+
+#uploadingForm label {
+  background-color: #4caf50;
+  padding: 1em 2em;
+  width: 166px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#uploadingForm label svg {
+  margin-left: 1em;
+}
+
+#uploadingForm button {
+  background-color: #2196f3;
+  width: 166px;
+  height: 34px;
+  font-size: 1rem;
+  padding: 1em 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: none;
+}
+
+#uploadingForm button svg {
+  margin-left: 1em;
+}
+
+#uploadingForm p {
+  color: red;
+}
+
+input#file {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

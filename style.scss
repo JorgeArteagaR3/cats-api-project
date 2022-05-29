@@ -166,3 +166,58 @@ a {
         font-size: 2rem;
     }
 }
+#uploadCat {
+    margin-top: 3em;
+}
+#uploadingForm {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    img {
+        margin-bottom: 1em;
+    }
+    label {
+        background-color: #4caf50;
+        padding: 1em 2em;
+        width: 166px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        svg {
+            margin-left: 1em;
+        }
+    }
+    button {
+        background-color: #2196f3;
+        width: 166px;
+        height: 34px;
+        font-size: 1rem;
+        padding: 1em 2em;
+        border-radius: 5px;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        svg {
+            margin-left: 1em;
+        }
+    }
+    p {
+        color: red;
+    }
+}
+input#file {
+    display: none;
+}
